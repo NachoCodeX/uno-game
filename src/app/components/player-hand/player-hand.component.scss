@@ -1,0 +1,19 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  // height: ;
+  // background-color: #000;
+  // background-color: #ff5722;
+  // background-color: #673ab7;
+  // background-color: #512da8;
+  background-color: lighten(gray, 45%);
+
+  padding: 10px;
+
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+}

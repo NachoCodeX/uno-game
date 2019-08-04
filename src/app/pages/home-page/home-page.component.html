@@ -1,0 +1,14 @@
+<div *ngIf="!isWon; else winnerBlock" class="wrapper">
+  <uno-header></uno-header>
+  <div class="home-wrapper">
+    <player-hand></player-hand>
+
+    <pile-cards></pile-cards>
+  </div>
+</div>
+
+<ng-template #winnerBlock>
+  <div class="flex flex-center winner">
+    <fa-icon style="color:#fff;" [icon]="['fas', 'trophy']" size="10x"></fa-icon>
+  </div>
+</ng-template>

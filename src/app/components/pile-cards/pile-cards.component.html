@@ -1,0 +1,14 @@
+<div class="full-height flex flex-center wrapper">
+  <div class="card">
+    <img *ngIf="currentCard; else empty" style="height: 550px;" src="assets/cards/{{ currentCard.path }}.png" alt="" />
+    <ng-template #empty>
+      <img src="assets/card_back.png" alt="" />
+    </ng-template>
+  </div>
+  <div class="float-pile">
+    <div class="flex items-center">
+      <img (click)="canPlay  ? onClick():null" [class.disabled-img]="!canPlay" class="pointer" style="height: 80px; margin-right: 10px;" src="assets/card_back.png" alt="" />
+      <p style="color:#fff">({{ cards }})</p>
+    </div>
+  </div>
+</div>
